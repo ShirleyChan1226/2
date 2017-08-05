@@ -1,0 +1,165 @@
+<<<<<<< dabb8821a5f0f00a4eb32eb33796039fef85d9fc
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id="title"></title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script src="http://qcdn.letwx.com/app/libs/oauth.min.js"></script>
+		<script src="js/config.js"></script>
+        <script src="js/snap.svg.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/same.css" />
+		<link rel="stylesheet" type="text/css" href="css/static.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+        <audio id="audio_bg" src="http://q.letwx.com/app/touchtotouch-build/resource/happy.mp3" loop="loop" preload></audio>
+        <audio id="audio_button" src="http://q.letwx.com/app/touchtotouch-build/resource/button.mp3" preload></audio>
+
+		<section id="indexPage" class="hide rel wh-100">
+            <img id="music" class="hide abs musicRun" src="" alt=""/>
+			<img class="logo abs-h-center" src="" alt=""/>
+			<img class="indexTitle abs-h-center" src="" alt=""/>
+            <!--type0抽奖  type1分享-->
+            <div class="w-100 abs-h-center hidden">
+                <img class='type0 startBtn' src="" alt=""/>
+                <img class="type0 ruleBtn ruleBtn0 f-l" src="" alt=""/>
+                <img class="type0 myprizeBtn f-r" src="" alt=""/>
+            </div>
+
+            <img class='type1 startBtn abs-h-center' src="" alt=""/>
+            <img class='type1 ruleBtn ruleBtn1 abs' src="" alt=""/>
+		</section>
+
+		<section id="rulePage" class="m-pop rel hide">
+			<div class="abs-center">
+                <img class="ruleBg w-100" src="" alt=""/>
+                <img id="ruleCloseBtn" class="abs" src="" alt=""/>
+				<div class="abs-h-center rules w-100"></div>
+			</div>
+		</section>
+
+		<section id="gamePage" class="wh-100 hide rel">
+            <img src="" alt="" class="game_hint abs-h-center"/>
+            <div class="timeScore abs-h-center w-100">
+                <p class="f-l rel">
+                    <img class="level w-100" src="" alt=""/>
+                    <span class="abs-v-center font-20" id="score"></span>
+                </p>
+                <p class="f-r rel">
+                    <img class="clock w-100" src="" alt=""/>
+                    <span class="abs-v-center font-20" id="second"></span>
+                </p>
+            </div>
+            <svg id="gameSVG" class="wh-100"></svg>
+		</section>
+
+		<section id="resultPage" class="wh-100 m-pop hide">
+            <div class="abs-center">
+                <img class="resultBg w-100" src="" alt=""/>
+                <div class="abs-h-center hintBox w-100 t-c">
+                    <p class="scoreHint font-16 t-c"></p>
+                    <p class="levelHint font-16">真不愧为<span></span></p>
+                    <div class="resultHint font-16"></div>
+                </div>
+                <div class="btnBox abs-h-center w-100 t-c">
+                    <img id="againBtn" src="" alt=""/>
+                    <img id="shareBtn" src="" alt=""/>
+                    <img id="getBtn" src="" alt=""/>
+                </div>
+            </div>
+		</section>
+
+        <section id="sharePage" class="m-pop hide">
+            <img class="abs" src="" alt=""/>
+        </section>
+
+		<script src="http://qcdn.letwx.com/app/libs/one.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js实现3D图片逐张轮播幻灯片 - 站长素材</title>
+</head>
+
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"新宋体";}
+/* focus_Box */
+#focus_Box{position:relative;width:710px;height:308px;margin:20px auto;}
+#focus_Box ul{position:relative;width:710px;height:308px}
+#focus_Box li{z-index:0;position:absolute; width:0px;background:#787878;height:0px;top:146px;cursor:pointer;left:377px;border-radius:4px;box-shadow:1px 1px 12px rgba(200, 200, 200, 1)}
+#focus_Box li img{width:100%;background:url(images/loading.gif) no-repeat center 50%;height:100%;vertical-align:top}
+#focus_Box li p{position:absolute;left:0;bottom:0px;width:100%;height:40px;line-height:40px;background:url(images/float-bg.png) repeat;text-indent:8px;color:#fff;}
+#focus_Box li p span{display:inline-block;width:70%;height:40px;overflow:hidden;}
+#focus_Box .prev,#focus_Box .next{display:block;z-index:100;overflow:hidden;cursor:pointer;position:absolute;width:52px;height:52px;top:131px;}
+#focus_Box .prev{background:url(images/btn.png) left bottom no-repeat;left:0px}
+#focus_Box .next{background:url(images/btn.png) right bottom no-repeat;right:0px} 
+#focus_Box .prev:hover{background-position:left top;}
+#focus_Box .next:hover{background-position:right top;}
+#focus_Box a.imgs-scroll-btn{display:block;position:absolute;z-index:110;top:7px;right:15px;width:51px;height:23px;overflow:hidden;background:url(images/share-btn.png) no-repeat;text-indent:-999px;}
+</style>
+
+<script src="js/ZoomPic.js"></script>
+
+
+<div id="focus_Box">
+	<span class="prev">&nbsp;</span>
+	<span class="next">&nbsp;</span>
+	<ul>
+		<li>
+			<a href="http://sc.chinaz.com/"><img width="445" height="308" alt="这个时代 你所追求的是什么？" src="images/1.jpg" /></a>
+			<p>
+				<span>这个时代 你所追求的是什么？</span>
+				<a href="http://sc.chinaz.com/" class="imgs-scroll-btn">分享</a>
+			</p>
+		</li>
+		<li>
+			<a href="http://sc.chinaz.com/"><img width="445" height="308" alt="我们所追求的不是拥有一切，而是拥有值得的一切" src="images/2.jpg" /></a>
+			<p>
+				<span>我们所追求的不是拥有一切，而是拥有值得的一切</span>
+				<a href="http://sc.chinaz.com/" class="imgs-scroll-btn">分享</a>
+			</p>
+		</li>
+		<li>
+			<a href="http://sc.chinaz.com/"><img width="445" height="308" alt="一段旅程，两个城市，潮流正在被重塑" src="images/3.jpg" /></a>
+			<p>
+				<span>一段旅程，两个城市，潮流正在被重塑</span>
+				<a href="http://sc.chinaz.com/" class="imgs-scroll-btn">分享</a>
+			</p>
+		</li>
+		<li>
+			<a href="http://sc.chinaz.com/"><img width="445" height="308" alt="你的眼光、激情、创意和内涵，也在重塑着城市的潮流" src="images/4.jpg" /></a>
+			<p>
+				<span>你的眼光、激情、创意和内涵，也在重塑着城市的潮流</span>
+				<a href="http://sc.chinaz.com/" class="imgs-scroll-btn">分享</a>
+			</p>
+		</li>
+		<li>
+			<a href="http://sc.chinaz.com/"><img width="445" height="308" alt="在这里，抛开重重限制，释放真实自我" src="images/5.jpg" /></a>
+			<p>
+				<span>在这里，抛开重重限制，释放真实自我</span>
+				<a href="http://sc.chinaz.com/" class="imgs-scroll-btn">分享</a>
+			</p>
+		</li>
+	</ul>
+</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
+>>>>>>> ‘2
